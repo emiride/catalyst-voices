@@ -4,7 +4,7 @@
 use minicbor::{encode::Write, Decode, Decoder, Encode, Encoder};
 use serde::{Deserialize, Serialize};
 
-use crate::c509_general_names::{
+use crate::general_names::{
     general_name::{GeneralName, GeneralNameTypeRegistry, GeneralNameValue},
     GeneralNames,
 };
@@ -105,7 +105,7 @@ impl Decode<'_, ()> for GeneralNamesOrText {
 #[cfg(test)]
 mod test_alt_name {
     use super::*;
-    use crate::c509_general_names::general_name::{
+    use crate::general_names::general_name::{
         GeneralName, GeneralNameTypeRegistry, GeneralNameValue,
     };
 

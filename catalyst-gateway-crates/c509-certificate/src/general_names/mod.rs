@@ -85,7 +85,7 @@ mod test_general_names {
     use other_name_hw_module::OtherNameHardwareModuleName;
 
     use super::*;
-    use crate::c509_oid::C509oid;
+    use crate::oid::C509oid;
 
     #[test]
     fn encode_decode_gns() {
