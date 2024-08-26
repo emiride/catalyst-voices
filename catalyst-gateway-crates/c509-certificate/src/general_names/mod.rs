@@ -37,7 +37,8 @@ impl GeneralNames {
     }
 
     /// Get the inner of `GeneralName`.
-    pub(crate) fn get_inner(&self) -> &Vec<GeneralName> {
+    #[must_use]
+    pub fn get_inner(&self) -> &Vec<GeneralName> {
         &self.0
     }
 }
