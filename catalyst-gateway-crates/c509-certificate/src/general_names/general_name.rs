@@ -131,20 +131,6 @@ pub enum GeneralNameValue {
     Unsupported,
 }
 
-impl GeneralNameValue {
-    /// Get inner data of `GeneralNameValue`.
-    pub fn get_inner(&self) -> Option<&dyn std::fmt::Debug> {
-        match self {
-            GeneralNameValue::Text(value) => Some(value),
-            GeneralNameValue::Bytes(value) => Some(value),
-            GeneralNameValue::Oid(value) => Some(value),
-            GeneralNameValue::OtherNameHWModuleName(value) => Some(value),
-            GeneralNameValue::Name(value) => Some(value),
-            GeneralNameValue::Unsupported => None,
-        }
-    }
-}
-
 /// Trait for `GeneralNameValueType`
 trait GeneralNameValueTrait {
     /// Get the type of the `GeneralNameValueType`.
