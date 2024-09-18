@@ -44,32 +44,34 @@ class SpaceSidePanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _Container(
-      margin: margin,
-      borderRadius: isLeft
-          ? const BorderRadius.horizontal(right: Radius.circular(16))
-          : const BorderRadius.horizontal(left: Radius.circular(16)),
-      child: DefaultTabController(
-        length: tabs.length,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _Header(
-              name: name,
-              onCollapseTap: onCollapseTap,
-              isLeft: isLeft,
-            ),
-            _Tabs(
-              tabs,
-              controller: tabController,
-            ),
-            const SizedBox(height: 12),
-            TabBarStackView(
-              controller: tabController,
-              children: tabs.map((e) => e.body).toList(),
-            ),
-            const SizedBox(height: 12),
-          ],
+    return SingleChildScrollView(
+      child: _Container(
+        margin: margin,
+        borderRadius: isLeft
+            ? const BorderRadius.horizontal(right: Radius.circular(16))
+            : const BorderRadius.horizontal(left: Radius.circular(16)),
+        child: DefaultTabController(
+          length: tabs.length,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _Header(
+                name: name,
+                onCollapseTap: onCollapseTap,
+                isLeft: isLeft,
+              ),
+              _Tabs(
+                tabs,
+                controller: tabController,
+              ),
+              const SizedBox(height: 12),
+              TabBarStackView(
+                controller: tabController,
+                children: tabs.map((e) => e.body).toList(),
+              ),
+              const SizedBox(height: 12),
+            ],
+          ),
         ),
       ),
     );
