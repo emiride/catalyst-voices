@@ -4,6 +4,7 @@ import 'package:flutter_quill/flutter_quill.dart';
 class WorkspaceProposalSegmentStep extends Equatable {
   final int id;
   final String title;
+  final String? titleInDetails;
   final String? description;
   final RichTextParams? richTextParams;
   final bool isEditable;
@@ -11,6 +12,7 @@ class WorkspaceProposalSegmentStep extends Equatable {
   const WorkspaceProposalSegmentStep({
     required this.id,
     required this.title,
+    this.titleInDetails,
     this.description,
     this.richTextParams,
     this.isEditable = false,
@@ -23,6 +25,7 @@ class WorkspaceProposalSegmentStep extends Equatable {
   List<Object?> get props => [
         id,
         title,
+        titleInDetails,
         description,
         richTextParams,
         isEditable,

@@ -71,6 +71,8 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Problem perspective',
+          titleInDetails:
+              "What is your perspective on the problem you're solving?",
           richTextParams: RichTextParams(
             document: Document.fromJson(answer),
             charsLimit: 200,
@@ -79,6 +81,7 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Perspective rationale',
+          titleInDetails: 'Why did you choose this perspective?',
           richTextParams: RichTextParams(
             document: Document.fromJson(answer),
             charsLimit: 200,
@@ -87,6 +90,7 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 2,
           title: 'Project engagement',
+          titleInDetails: 'Who will your project engage?',
           richTextParams: RichTextParams(
             document: Document.fromJson(answer),
             charsLimit: 200,
@@ -121,6 +125,8 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Delivery & Accountability',
+          titleInDetails:
+              'How do you proof trust and accountability for your project?',
           richTextParams: RichTextParams(
             document: Document.fromJson(deliveryAndAccountability),
           ),
@@ -128,6 +134,7 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Feasibility checks',
+          titleInDetails: 'How will you check if your approach will work?',
           richTextParams: RichTextParams(
             document: Document.fromJson(feasibilityChecks),
           ),
