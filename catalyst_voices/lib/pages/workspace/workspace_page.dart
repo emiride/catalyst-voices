@@ -30,7 +30,9 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Title',
-          document: Document.fromJson(title),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(title),
+          ),
         ),
       ],
     ),
@@ -40,17 +42,26 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Problem statement',
-          document: Document.fromJson(problemStatement),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(problemStatement),
+            charsLimit: 200,
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Solution statement',
-          document: Document.fromJson(solutionStatement),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(solutionStatement),
+            charsLimit: 200,
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 2,
           title: 'Public description',
-          document: Document.fromJson(publicDescription),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(publicDescription),
+            charsLimit: 3000,
+          ),
         ),
       ],
     ),
@@ -60,17 +71,26 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Problem perspective',
-          document: Document.fromJson(answer),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(answer),
+            charsLimit: 200,
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Perspective rationale',
-          document: Document.fromJson(answer),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(answer),
+            charsLimit: 200,
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 2,
           title: 'Project engagement',
-          document: Document.fromJson(answer),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(answer),
+            charsLimit: 200,
+          ),
         ),
       ],
     ),
@@ -80,12 +100,18 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Bonus mark-up',
-          document: Document.fromJson(bonusMarkUp),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(bonusMarkUp),
+            charsLimit: 900,
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Value for Money',
-          document: Document.fromJson(valueForMoney),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(valueForMoney),
+            charsLimit: 2600,
+          ),
         ),
       ],
     ),
@@ -95,12 +121,16 @@ var _proposalNavigation = WorkspaceProposalNavigation(
         WorkspaceProposalSegmentStep(
           id: 0,
           title: 'Delivery & Accountability',
-          document: Document.fromJson(deliveryAndAccountability),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(deliveryAndAccountability),
+          ),
         ),
         WorkspaceProposalSegmentStep(
           id: 1,
           title: 'Feasibility checks',
-          document: Document.fromJson(feasibilityChecks),
+          richTextParams: RichTextParams(
+            document: Document.fromJson(feasibilityChecks),
+          ),
         ),
       ],
     ),

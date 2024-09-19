@@ -6,7 +6,6 @@ import 'package:catalyst_voices_localization/catalyst_voices_localization.dart';
 import 'package:catalyst_voices_models/catalyst_voices_models.dart';
 import 'package:catalyst_voices_shared/catalyst_voices_shared.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_quill/flutter_quill.dart';
 
 class ProposalDetails extends StatelessWidget {
   final WorkspaceProposalNavigation navigation;
@@ -97,13 +96,13 @@ class _SegmentDetails extends StatelessWidget {
         ),
         if (isExpanded)
           ...steps.map(
-            (step) {
+                (step) {
               return _StepDetails(
                 key: ValueKey('WorkspaceStep${step.id}TileKey'),
                 id: step.id,
                 name: step.title,
                 desc: step.description,
-                doc: step.document,
+                richTextParams: step.richTextParams,
                 isSelected: step.id == selected,
                 isEditable: step.isEditable,
               );
@@ -121,7 +120,7 @@ class _StepDetails extends StatelessWidget {
     required this.id,
     required this.name,
     this.desc,
-    this.doc,
+    this.richTextParams,
     this.isSelected = false,
     this.isEditable = false,
   });
@@ -129,33 +128,41 @@ class _StepDetails extends StatelessWidget {
   final int id;
   final String name;
   final String? desc;
-  final Document? doc;
+  final RichTextParams? richTextParams;
   final bool isSelected;
   final bool isEditable;
 
   @override
   Widget build(BuildContext context) {
-    return (desc != null)
-        ? WorkspaceTextTileContainer(
-            name: name,
-            isSelected: isSelected,
-            headerActions: [
-              TextButton(
-                onPressed: isEditable ? () {} : null,
-                child: Text(
-                  context.l10n.stepEdit,
-                  style: Theme.of(context).textTheme.labelSmall,
-                ),
-              ),
-            ],
-            content: desc!,
-          )
-        : WorkspaceTileContainer(
-            isSelected: isSelected,
-            content: VoicesRichText(
-              title: name,
-              document: doc,
+    if(desc != null) {
+      return WorkspaceTextTileContainer(
+        name: name,
+        isSelected: isSelected,
+        headerActions: [
+          TextButton(
+            onPressed: isEditable ? () {} : null,
+            child: Text(
+              context.l10n.stepEdit,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .labelSmall,
             ),
-          );
+          ),
+        ],
+        content: desc!,
+      );
+    } else if(richTextParams != null) {
+      return WorkspaceTileContainer(
+        isSelected: isSelected,
+        content: VoicesRichText(
+          title: name,
+          document: richTextParams!.document,
+          charsLimit: richTextParams!.charsLimit,
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
   }
 }

@@ -5,17 +5,17 @@ class WorkspaceProposalSegmentStep extends Equatable {
   final int id;
   final String title;
   final String? description;
-  final Document? document;
+  final RichTextParams? richTextParams;
   final bool isEditable;
 
   const WorkspaceProposalSegmentStep({
     required this.id,
     required this.title,
     this.description,
-    this.document,
+    this.richTextParams,
     this.isEditable = false,
   }) : assert(
-          description != null || document != null,
+          description != null || richTextParams != null,
           'Make sure description or document are provided',
         );
 
@@ -24,7 +24,17 @@ class WorkspaceProposalSegmentStep extends Equatable {
         id,
         title,
         description,
-        document,
+        richTextParams,
         isEditable,
       ];
+}
+
+class RichTextParams {
+  final Document document;
+  final int? charsLimit;
+
+  RichTextParams({
+    required this.document,
+    this.charsLimit,
+  });
 }
