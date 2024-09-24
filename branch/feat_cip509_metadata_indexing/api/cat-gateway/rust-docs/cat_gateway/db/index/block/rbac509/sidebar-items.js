@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["insert_rbac509"],"struct":["Rbac509InsertQuery"]};

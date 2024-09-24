@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIRST_ROLE_EXT_KEY","LAST_ROLE_EXT_KEY"],"enum":["KeyReference","LocalRefInt","RoleDataInt"],"struct":["KeyLocalRef","RoleData"]};

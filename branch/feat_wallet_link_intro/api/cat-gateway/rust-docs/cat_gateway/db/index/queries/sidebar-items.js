@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["PreparedQuery","PreparedSelectQuery"],"mod":["staked_ada"],"struct":["PreparedQueries"],"type":["FallibleQueryResult","FallibleQueryResults","FallibleQueryTasks","SizedBatch"]};

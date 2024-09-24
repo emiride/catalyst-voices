@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["ouroboros_impl_self_referenced_multi_era_block"],"struct":["MultiEraBlock","MultiEraBlockInner"]};

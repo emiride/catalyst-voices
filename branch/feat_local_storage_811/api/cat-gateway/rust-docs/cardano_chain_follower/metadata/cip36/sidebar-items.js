@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["LABEL","PROJECT_CATALYST_PURPOSE","SIGNDATA_PREAMBLE","SIG_LABEL"],"struct":["Cip36","VotingPubKey"],"type":["Ed25519PubKey"]};

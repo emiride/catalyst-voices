@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["CREATE_NAMESPACE_CQL","SCHEMAS","SCHEMA_VERSION"],"fn":["create_namespace","create_schema","namespace"]};

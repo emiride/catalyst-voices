@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MIN_CHUNK_SIZE"],"fn":["get_content_length","get_content_length_async"],"static":["RESOLVER"],"struct":["BalancingResolver","DlChunk","DlConfig","ParallelDownloadProcessor","ParallelDownloadProcessorInner"],"type":["DlBlock","DlWorkOrder"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ORIGIN_POINT","TIP_POINT","UNKNOWN_POINT"],"fn":["cmp_point"],"struct":["Point"]};

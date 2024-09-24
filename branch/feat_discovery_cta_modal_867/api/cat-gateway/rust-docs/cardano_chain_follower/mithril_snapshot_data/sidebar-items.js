@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["latest_mithril_snapshot_data","latest_mithril_snapshot_id","update_latest_mithril_snapshot"],"static":["CURRENT_MITHRIL_SNAPSHOT"],"struct":["SnapshotData"]};

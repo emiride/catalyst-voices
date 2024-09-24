@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["SYNC_READY_RACE_BACKOFF_SECS"],"fn":["block_until_sync_ready","check_sync_ready","get_chain_update_rx_queue","get_chain_update_tx_queue","notify_follower","wait_for_sync_ready"],"static":["SYNC_READY"],"struct":["SyncReady","SyncReadyWaiter"]};
