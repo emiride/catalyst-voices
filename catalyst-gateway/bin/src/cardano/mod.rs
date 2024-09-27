@@ -38,6 +38,18 @@ async fn start_sync_for(chain: Network) -> anyhow::Result<()> {
     Ok(())
 }
 
+async fn start_sync() -> anyhow::Result<()> {
+    let cfg = ChainSyncConfig::default_for(chain);
+    info!(chain = %cfg.chain, "Starting Blockchain Sync");
+
+    if let Err(error) = cfg.run().await {
+        error!(chain=%chain, error=%error, "Failed to start chain sync task");
+        Err(error)?;
+    }
+
+    Ok(())
+}
+
 /// Data we return from a sync task.
 struct SyncParams {
     /// What blockchain are we syncing.
